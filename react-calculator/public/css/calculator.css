@@ -1,0 +1,33 @@
+.container {
+    width: 50%;
+    margin-top: 35px;
+}
+
+.col12-bg {
+    background-color: grey;
+    padding-top: 5px;
+}
+.gray-area {
+    background-color: rgb(207, 204, 204);
+    padding-top: 10px;
+}
+.operators-col {
+    background-color: rgb(247, 122, 64);
+    padding-top: 10px;
+}
+.thick-border {
+    border-top: 1px solid  gray;
+    border-bottom: 1px solid gray;
+}
+.left-border {
+    border-left: 1px solid gray;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-color {
+    color: #fff;
+}

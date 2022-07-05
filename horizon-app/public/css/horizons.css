@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&family=Source+Sans+Pro:wght@400;700&family=Space+Mono&display=swap');
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+.nav-margin {
+    margin-left: 55px;
+    margin-right: 55px;
+}
+.logo-resize {
+    border-style: none;
+    width: 65%;
+}
+.country-flags {
+    margin-left: 25rem;
+}
+.g-sflag-resize {
+    width: 4%;
+}
+.nflag {
+    width: 8%;
+    height: 4vh;
+}
+.abt-us {
+    font-style: italic;
+}
+.carousel-height {
+    height: 80vh;
+}
+.plans-mr {
+    margin-top: 45px;
+}
+
+.thumb-margin {
+   margin: 15px;
+}
+.thumbnail-h {
+    margin-top: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.txt-italic {
+    font-size: 12px;
+    font-style: italic;
+}
+.footer {
+    background-color: navy;
+    height: 18vh;
+    margin: 6px;
+} 
+.margin-space {
+    margin-left: 10rem;
+    margin-bottom: 5px;
+}
+.visit-us {
+    text-transform: uppercase;
+    color: peru;
+    font-size: 12px;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+.country-branch {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.counry-address {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-small;
+    color: #fff;
+}
+
+
+
+

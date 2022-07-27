@@ -59,6 +59,6 @@ class ClassForm extends Component {
                 </div>
           </form>
         );
-      }
+    }
 }
 export default ClassForm;

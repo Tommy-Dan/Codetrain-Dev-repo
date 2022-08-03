@@ -67,6 +67,7 @@ class ClassForm extends Component {
                   <button onClick={this.handleSubmit}>Sign-in</button>
                 </div>
               </form>
+              
               <div className="display">
                 {
                     this.state.info.map((info, index) => {

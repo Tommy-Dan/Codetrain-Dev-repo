@@ -8,13 +8,13 @@ import "./App.css";
 function App() {
   let [users, setsUsers] = useState([
         {name: "Tom", gender: "M", gen: 22, email: "tom@gmail.com"},
-        {name: "Seth", gender: "M", gen: 19, email: "seth110@gmail.com"}
+        {name: "Seth", gender: "M", gen: 19, email: "seth110@gmail.com"},
       ]);
 
   const addNewUser = (user) => {
     setsUsers([...users, user]);
   };
-
+ 
   return (
     <Container style={{marginTop: "30px"}}>
       <Row>

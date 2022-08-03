@@ -7,8 +7,8 @@ function AllUsers(props) {
   return (
      <Container>
          <Row>
-             {props.userInfo.map((item, index) => {
-                return <User key={index} userBio={item} />
+             {props.userInfo.map((item) => {
+                return <User userBio={item} key={item.id} />
              })}
          </Row>
      </Container>

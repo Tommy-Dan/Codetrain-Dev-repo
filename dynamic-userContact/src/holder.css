@@ -1,0 +1,57 @@
+.holder {
+    width: 60%;
+    height: inherit;
+    background: #eee;
+    border-radius: 10px;
+    margin: auto;
+    text-align: start;
+}
+
+.h4, .h5, h6 {
+    color: #000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.input {
+    background: #fff;
+    border: none;
+    border-bottom: #eee 2px solid;
+    border-radius: 10px;
+    display: block;
+    width: 60%;
+    margin: 20px 0;
+    padding: 10px;
+    outline: none;
+    color: #252424;
+}
+.btnn {
+    width: 20%;
+    border: none;
+    outline: none;
+    background: #438843;
+    color: #252424;
+    padding: 10px;
+    margin: 15px 50px 40px 50px;
+    border-radius: 15px;
+}
+button {
+    color: #000;
+    padding: 5px 10px;
+    margin: 10px;
+    background: #fff;
+    border: none;
+}
+.btnn-2 {
+    color: #fff;
+    background: #638a86;
+    padding: 5px 10px;
+    margin: 10px;
+    border: none;
+}
+.card {
+    background: #eee;
+}
+
+.m-top .h4{
+    margin: 48px auto;
+}

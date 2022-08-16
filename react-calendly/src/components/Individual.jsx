@@ -1,0 +1,163 @@
+import React from 'react';
+
+
+
+
+function Individual() {
+  return (
+    <>
+     <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="easy-schedule">
+                        This genius way to work <span class="ahead-col">better</span>
+                    </h1>
+                    <p class="h5 mt-4">
+                        Calendly makes it easy to work smarter when you're working solo.
+                        Meetinga, sessions, and appointments become more efficient ways to 
+                        achieve success and accomplish goals.
+                    </p>
+                    <button class="signUp-btn mt-5">Sign up for free</button>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.ctfassets.net/k0lk9kiuza3o/2kiAGfjL7zawukKEtUekPZ/e9808f922920947d64e0ffe4fbf18a45/Calendly-Individuals-Hero.png?w=1472&h=1232&q=50&fm=png" 
+                     alt="Calendly-Individuals-Hero" class="img-fluid p-3" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/zoom-call.png" alt="On zoom call" class="img-fluid p-3" />
+                </div>
+                <div class="col-md-6 mgn-top">
+                    <h4 class="c-calendar ml-5">A Curated Calendar</h4>
+                    <h6 class="book-up ml-5">Book up efficiently</h6>
+                    <p class="h6 mt-4 ml-5">
+                        When invites select a meeting slot from your schedule, they only see the times 
+                        you're available, and only the length and type of meeting you want to have. 
+                        Your schedule filled up efficiently, and everyone avoids excess email exchange.
+                    </p>
+                </div>
+            </div>
+            <div class="row my-5">
+                <div class="col-md-6">
+                    <h4 class="c-calendar ml-5">Automated Notifications & Follow-ups</h4>
+                    <h6 class="book-up ml-5">Work like you have a personal assistant</h6>
+                    <p class="h6 mt-4 ml-5">
+                        Because Calendly automates administrative tasks like sending 
+                        reminder emails and follow-ups, you can focus on the work that 
+                        builds your business and brings customers back for more.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/meeting.png" alt="Zoom meeting" class="img-fluid p-3" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="individual-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mr-auto">
+                    <h1 class="team-plans">
+                        Find just-right plans for Individuals and small teams
+                    </h1>
+                    <button class="plans-btn mt-5">See our plans</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="i-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 ml-2">
+                    <h4 class="easy-ahead">
+                        Easy<br /> <span class="ahead-col" style={{lineheight: 1.5}}>ahead</span>
+                    </h4>
+                    <h6 class="advanced">
+                        We take the work out of connecting with others so you can accomplish more.
+                    </h6>
+                    <div class="dropdown">
+                        <button type="select" class="btn dropdown-toggle language-selection" data-toggle="dropdown">
+                            English
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="##" class="dropdown-item">English</a>
+                            <a href="##" class="dropdown-item">German</a>
+                            <a href="##" class="dropdown-item">Twi</a>
+                            <a href="##" class="dropdown-item">Spanish</a>
+                            <a href="##" class="dropdown-item">French</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <ul>
+                        <li class="links">
+                            <a href="##">About</a>
+                        </li>
+                        <li>
+                            <a href="##">About Calendly</a>
+                        </li>
+                        <li>
+                            <a href="##">Contact Sales</a>
+                        </li>
+                        <li>
+                            <a href="##">Newsroom</a>
+                        </li>
+                        <li>
+                            <a href="##">Careers</a>
+                        </li>
+                        <li>
+                            <a href="##">Security</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul>
+                        <li class="links">
+                            <a href="##">Solutions</a>
+                        </li>
+                        <li>
+                            <a href="##">Customer Success</a>
+                        </li>
+                        <li>
+                            <a href="##">Sales</a>
+                        </li>
+                        <li>
+                            <a href="##">Recruiting</a>
+                        </li>
+                        <li>
+                            <a href="##">Education</a>
+                        </li>
+                        <li>
+                            <a href="##">Marketing</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li class="links">
+                            <a href="##">Popular Features</a>
+                        </li>
+                        <li>
+                            <a href="##">Embeded Calendly</a>
+                        </li>
+                        <li>
+                            <a href="##">Availability</a>
+                        </li>
+                        <li>
+                            <a href="##">Sending Notifications</a>
+                        </li>
+                        <li>
+                            <a href="##">Using calendly Mobile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+     </section>
+    </>
+  )
+}
+
+export default Individual;

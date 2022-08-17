@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-        <Nav defaultActiveKey="/home" as="ul">
+    <Nav defaultActiveKey="/home" as="ul">
         <Nav.Item as="li">
             <Link className="nav" to="/">
                 Home

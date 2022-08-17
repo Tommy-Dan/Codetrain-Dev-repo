@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function About() {
   return (
@@ -9,4 +9,4 @@ function About() {
   )
 }
 
-export default About
+export default About;

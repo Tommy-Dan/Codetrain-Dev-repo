@@ -1,3 +1,4 @@
+import '../App.css';
 import React, { Component } from 'react';
 
 
@@ -27,11 +28,10 @@ class UsersClass extends Component {
             <>
                 {this.state.users.map((user, id) => {
 					return (
-						<div>
-							<h1>Id:</h1> <span>{user.id}</span>
-							<h1>Name:</h1> <span>{user.name}</span>
-							<h1>Username:</h1> <span>{user.username}</span>
-							<hr />
+						<div className='d-format'>
+							<h3>Name: <span>{user.name}</span></h3>
+							<h3>Username: <span>{user.username}</span></h3>
+							<h3>Email: <span>{user.email}</span></h3>
 						</div>
 					);
 				})}

@@ -1,0 +1,44 @@
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.d-format {
+  margin:  18px 25px 40px 35px;
+}
+.d-format h4 {
+  margin-left: 25px;
+  font-size: 30px;
+  color: #807f7f;
+}
+
+.d-format h4 span {
+  font-size: 20px;
+  margin-left: 25px;
+  background: #87ceeb;
+}
+
+.d-format h4 span img {
+  width: 150px;
+  height: auto;
+  border: 1px solid #808080;
+}

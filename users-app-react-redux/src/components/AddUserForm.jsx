@@ -1,30 +1,28 @@
 import React, { useState } from "react";
-import { connect, useDispatch } from "react-redux";
-import { addUser } from "../actions/userActions";
-import { v4 as uuid } from "uuid";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { v4 as uuid } from "uuid";
+import { addUser } from "../actions/userActions";
+import { connect, useDispatch } from "react-redux";
 
 function AddUserForm(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [gen, setGen] = useState("");
+	const dispatch = useDispatch();
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		// props.addUser(newUser);
+		let userDetail = { id: uuid(), name, email, gen };
+		dispatch(addUser(userDetail));
+		setName("");
+		setEmail("");
+		setGen("");
+	};
 
-// creates an object with the details
-// of the new user including an auto generated id
-    let newUser = {
-			name: name,
-			email: email, 
-			gen: gen,
-      id: uuid(),
-    };
-    props.addUser(newUser);
-  };
-  return (
-<Form>
+	return (
+		<Form>
 			<Form.Group className="mb-3" controlId="formBasicEmail">
 				<Form.Label>Name</Form.Label>
 				<Form.Control
@@ -63,9 +61,9 @@ function AddUserForm(props) {
 		</Form>
 	);
 }
+// const mapDispatchToProps = {
+// 	addUser : addUser
+// }
+// export default connect(null, mapDispatchToProps) (AddUserForm);
 
-const mapDispatch = {
-  addUser: addUser,
-};
-
-export default connect(null, mapDispatch)(AddUserForm);
+export default AddUserForm;

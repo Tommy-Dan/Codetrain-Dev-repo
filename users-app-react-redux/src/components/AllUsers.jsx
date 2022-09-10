@@ -1,19 +1,22 @@
 import { Container, Row } from "react-bootstrap";
 import User from "./User";
+import { connect, useSelector } from "react-redux";
 
-
-function AllUsers({users, addUser}) {
+function AllUsers(props) {
+	const { users } = useSelector((state) => {
+		return state;
+	})
 	return (
 		<>
 			<Container>
 				<Row>
-					{users.userData.map((user) => {
+					{users.map((item, index) => {
 						return (
 							<User
-								key={uuid()}
-								userInfo={user.name}
-								deleteUser={user.deleteUser}
-								editUser={user.editUser}
+								key={index}
+								userInfo={item}
+								deleteUser={props.deleteUser}
+								editUser={props.editUser}
 							/>
 						);
 					})}
@@ -22,12 +25,13 @@ function AllUsers({users, addUser}) {
 		</>
 	);
 }
-const mapState = (state) => {
-   return { users: state.users};
-};
+// const mapState =(state)=>{
+// 	return {
+// 		users: state.users,
+// 	};
+// };
+// export default connect(mapState)(AllUsers);
 
-const mapDispatch = {
-	addUser: addUser
-};
+export default AllUsers;
 
-export default connect(mapState, mapDispatch)(AllUsers);
+

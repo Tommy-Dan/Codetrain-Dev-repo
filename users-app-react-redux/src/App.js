@@ -7,22 +7,19 @@ import AllUsers from "./components/AllUsers";
 function App() {
 	const [users, setUsers] = useState([]);
 
-	//add new user to the users array(state)
 	const AddNewUser = (user) => {
 		user.id = Math.random().toString(36);
 		setUsers([...users,
 			{ id: user.id, name: user.name, email: user.email, gen: user.gen },
 		]);
-
-		console.log(user);
 	};
 
-	//delete user from users array
+	//deleting user from users array:
 	const deleteUser = (id) => {
 		setUsers(users.filter((user) => (user.id !== id ? user : null)));
 	};
   
-	//edits user in users array
+	//editting user in users array:
 	const handleEdit = (id, newInfo) => {
 		setUsers(
 			users.map((user) => {

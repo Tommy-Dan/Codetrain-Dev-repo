@@ -1,18 +1,19 @@
 import { Container, Row } from "react-bootstrap";
 import User from "./User";
 
-function AllUsers(props) {
+
+function AllUsers({users, addUser}) {
 	return (
 		<>
 			<Container>
 				<Row>
-					{props.userData.map((item, index) => {
+					{users.userData.map((user) => {
 						return (
 							<User
-								key={index}
-								userInfo={item}
-								deleteUser={props.deleteUser}
-								editUser={props.editUser}
+								key={uuid()}
+								userInfo={user.name}
+								deleteUser={user.deleteUser}
+								editUser={user.editUser}
 							/>
 						);
 					})}
@@ -21,5 +22,12 @@ function AllUsers(props) {
 		</>
 	);
 }
+const mapState = (state) => {
+   return { users: state.users};
+};
 
-export default AllUsers;
+const mapDispatch = {
+	addUser: addUser
+};
+
+export default connect(mapState, mapDispatch)(AllUsers);

@@ -5,21 +5,16 @@ import { addContact } from "../actions/userActions";
 import { connect } from "react-redux";
 import { v4 as uuid } from "uuid";
 
+
 function AddContactForm(props) {
 	const [name, setName] = useState("");
 	const [location, setLocation] = useState("");
 	const [phone, setPhone] = useState("");
-	// const dispatch = useDispatch();
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		let contactInfo = { id: uuid(), name, location, phone };
 
 		props.addContact(contactInfo);
-		//function to dispatch the action to the store use the useDispatch hook
-		// dispatch(addContact(userInfo));
-		// console.log("====================================");
-		// console.log(userInfo);
-		// console.log("====================================");
 		setName("");
 		setLocation("");
 		setPhone("");

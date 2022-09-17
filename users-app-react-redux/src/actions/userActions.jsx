@@ -1,4 +1,5 @@
 //Defines the add user action with a type and payload/data
+
 export const addUser = (newUser) => {
     return {
       type: "ADD_USER",

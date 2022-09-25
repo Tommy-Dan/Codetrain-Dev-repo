@@ -1,0 +1,85 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.edit-btn svg,
+.delete-btn svg {
+  width: 60%;
+  height: 20px;
+}
+
+body {
+  background:#fff
+}
+.card {
+  width: 120%;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+label {
+  font-size: 25px;
+  font-weight: 600;
+  color: #808080;
+}
+
+.mgr-space{
+  margin-bottom: 25px;
+  color: #808080;
+  font-size: 20px;
+}
+
+.d-mgr{
+  margin-bottom: 65px;
+  color: #808080;
+  font-size: 20px;
+}
+
+span{
+  margin: 30px;
+  color: #000;
+  font-size: 14px;
+}
+
+.txt-f{
+  color: #808080;
+}
+.select{
+  width: 80%;
+  height: 35px;
+  margin-top: 25px;
+  border-radius: 5px;
+}
+
+#btn-save {
+  margin: 10px;
+  background-color: #203c20;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+}
+@media screen and (max-width: 820px) {
+  #ed {
+     font-size: 30px;
+    }
+}
+@media screen and (max-width: 600px) {
+  .card {
+    width: 100%;
+    height: auto;
+  }
+  .row {
+    display: block;
+    justify-content: center;
+    margin: auto;
+  }
+  #ed {
+    text-align: center;
+     color: 000;
+     font-size: 35px;
+}
+}
+
+
+

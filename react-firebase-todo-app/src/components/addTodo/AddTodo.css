@@ -1,0 +1,44 @@
+.addTodo{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+  }
+
+  .addTodo input{
+    height: 40px;
+    width: 30%;
+    border: unset;
+    border-radius: 5px;
+    font-size: 18px;
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    border: 1.5px solid #b9bfc6;
+    padding-left: 5px;
+  }
+  
+  .addTodo input:focus{
+    outline: none;
+  }
+  
+  .addTodo button {
+    height: 40px;
+    border: 1.5px;
+    border-radius: 5px;
+    color: white;
+    background-color: #006d80;
+  }
+  
+  
+  
+  .addTodo button:hover {
+    background-color: #cee3f5;
+  }
+  
+  .addTodo button:active {
+    background-color: #d3e1f3;
+  }
+  

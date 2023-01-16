@@ -21,7 +21,7 @@ server.use(bodyParser.json());
 //We do get, post, put, delete route
 
     //View all books[get method]
-    server.get("/books", listBooksController);
+    server.get("/books/:id", listBooksController);
 
     //Create book[post method]
     server.post("/book", createBookController);

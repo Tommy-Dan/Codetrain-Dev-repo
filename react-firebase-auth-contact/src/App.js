@@ -30,15 +30,15 @@ function App() {
     readData();
   }, [dispatch]);
 
-  useEffect(() => {
-    onAuthStateChanged(auth, (persons) => {
-      if (persons) {
-        dispatch(dispatchContact(persons));
-      } else {
-        dispatch(dispatchContact(null));
-      }
-    });
-  }, [dispatch]);
+  // useEffect(() => {
+  //   onAuthStateChanged(auth, (persons) => {
+  //     if (persons) {
+  //       dispatch(dispatchContact(persons));
+  //     } else {
+  //       dispatch(dispatchContact(null));
+  //     }
+  //   });
+  // }, []);
 
   return (
     <>

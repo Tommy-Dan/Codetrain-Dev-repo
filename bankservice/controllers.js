@@ -1,5 +1,6 @@
 //import BankModel
 const BankModel = require('./model.js');
+const accountModel = require('./accountModel');
 
 //controllers
 const listBanksController = (req, res) =>{
@@ -48,7 +49,7 @@ const updateBankController = (req, res) => {
  
 const deleteBankController = (req, res) => {
     // delete bank
-    const {id} = req.body;
+    const {id} = req.body; 
     BankModel.findByIdAndRemove(id).then(deletedBank =>{
        if(deletedBank){
            res.json({message: "bank deleted successfully!"});
@@ -57,11 +58,26 @@ const deleteBankController = (req, res) => {
        res.json({message: "Couldn't this delete bank from the DB!"});
     });
 }
+const createAccountController = (req, res) =>{
+    const {name, number, accountType, bankId } = req.body;
+    const account = new accountModel({
+        name, number, accountType, bankId
+    });
+    account.save().then(result => {
+        if(result)
+            res.json({message: "Account created", data: result});
+        else 
+            res.json({
+                message: "Failed to create Account!"
+            })
+        })
+}
 
 
 module.exports = {
     listBanksController,
     createBankController,
     updateBankController,
-    deleteBankController
+    deleteBankController,
+    createAccountController
 }

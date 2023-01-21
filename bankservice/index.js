@@ -6,7 +6,8 @@ const {
        listBanksController, 
        createBankController, 
        updateBankController, 
-       deleteBankController
+       deleteBankController,
+       createAccountController
       } = require('./controllers.js');
 
 
@@ -30,6 +31,9 @@ server.use(bodyParser.json());
 
     // delete bank - delete method
     server.delete('/bank', deleteBankController);
+
+    // create account - post method
+    server.post('/account', createAccountController);
 
 
 //start server

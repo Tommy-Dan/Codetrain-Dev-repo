@@ -11,10 +11,6 @@ const AccountSchema = new Schema({
         type: String,
         required: true
     },
-    type: {
-        type: String,
-        required: true
-    },
     accountType: {
         type: String,
         required: true

@@ -7,8 +7,9 @@ const {
        createBankController, 
        updateBankController, 
        deleteBankController,
-       createAccountController
-      } = require('./controllers.js');
+       createAccountController,
+       listAccountController
+      } = require('./controllers');
 
 
 //Create express server instance
@@ -21,19 +22,24 @@ server.use(bodyParser.json());
 
 //routes
     // view banks - get method
-    server.get('/banks/:id', listBanksController);
+    server.get('/banks/:id?', listBanksController);
 
+    
     // create bank - post method
     server.post('/bank', createBankController);
-
+    
     // update bank - put/patch method
     server.put('/bank', updateBankController);
-
+    
     // delete bank - delete method
     server.delete('/bank', deleteBankController);
-
+    
     // create account - post method
     server.post('/account', createAccountController);
+
+    // view accounts - with get method
+    server.get('/accounts/:id?', listAccountController);
+
 
 
 //start server

@@ -1,6 +1,6 @@
 //import BankModel
 const BankModel = require('./model.js');
-const accountModel = require('./accountModel');
+const AccountModel = require('./accountModel.js');
 
 //controllers
 const listBanksController = (req, res) =>{
@@ -8,14 +8,16 @@ const listBanksController = (req, res) =>{
     const {id} = req.params;
 
     if(id){
-        BankModel.find({_id: id}).then( banks => {
-            res.json({data: banks});
+        BankModel.find({_id:id}).then( bank => {
+            res.json({data: bank});
         }).catch( err => console.log(err));
-    }else {
+    }
+    else{
         BankModel.find().then( banks => {
             res.json({data: banks});
         }).catch( err => console.log(err));
     }
+    
 }
 
 const createBankController = (req, res) =>{
@@ -52,25 +54,45 @@ const deleteBankController = (req, res) => {
     const {id} = req.body; 
     BankModel.findByIdAndRemove(id).then(deletedBank =>{
        if(deletedBank){
-           res.json({message: "bank deleted successfully!"});
+        AccountModel.deleteMany({bankId: deletedBank._id}).then( result =>{
+            res.json({message: "bank deleted successfully!"});
+        }).catch(err => console.log(err));
            return;
        } 
        res.json({message: "Couldn't this delete bank from the DB!"});
     });
 }
+
 const createAccountController = (req, res) =>{
     const {name, number, accountType, bankId } = req.body;
-    const account = new accountModel({
-        name, number, accountType, bankId
-    });
+    const account = new AccountModel({name, number, accountType, bankId});
     account.save().then(result => {
         if(result)
             res.json({message: "Account created", data: result});
         else 
             res.json({
                 message: "Failed to create Account!"
-            })
-        })
+            });
+        });
+}
+
+const listAccountController = (req, res) =>{
+    const {id} = req.params;
+    
+    if(id){
+        AccountModel.find({_id: id})
+          .populate("bankId", "name location branch")
+          .then( account => {
+          res.json({data: account});
+        }).catch(err => console.log(err));
+    }
+    else{
+        AccountModel.find()
+           .populate("bankId", "name location branch")
+           .then( accounts => {
+           res.json({ data: accounts});
+        }).catch(err => console.log(err));
+    }
 }
 
 
@@ -79,5 +101,6 @@ module.exports = {
     createBankController,
     updateBankController,
     deleteBankController,
-    createAccountController
+    createAccountController,
+    listAccountController,
 }

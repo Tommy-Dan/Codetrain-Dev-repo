@@ -3,26 +3,33 @@ const mongoose = require('mongoose');
 
 //Create a new Bank Schema
 const Schema = mongoose.Schema;
-const BankSchema = new mongoose.Schema({
+const BankSchema = new Schema({
     name: {
         type: String,
         required: true
     },
-    number: {
+    location: {
         type: String,
         required: true
     },
-    accountType: {
+    branch: {
+        type: String,
+        required: true
+    },
+    address: {
+        type: String,
+        required: true
+    },
+    accountNumber: {
         type: String,
         required: true
     },
     accounts: [
-        {
+            {
             accountId: {
                 required: true,
                 type: Schema.Types.ObjectId,
                 ref: "Account"
-
             }
         }
     ]

@@ -2,15 +2,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const {
-       listBanksController, 
-       createBankController, 
-       updateBankController, 
-       deleteBankController,
-       createAccountController,
-       listAccountController
-      } = require('./controllers');
-
+const accountRoutes = require('./routes/account');
+const bankRoutes = require('./routes/bank');
 
 //Create express server instance
 const server = express();
@@ -18,31 +11,13 @@ const server = express();
 //Middlewares[body-parser]
 server.use(bodyParser.json());
 
-  
 
-//routes
-    // view banks - get method
-    server.get('/banks/:id?', listBanksController);
-
-    
-    // create bank - post method
-    server.post('/bank', createBankController);
-    
-    // update bank - put/patch method
-    server.put('/bank', updateBankController);
-    
-    // delete bank - delete method
-    server.delete('/bank', deleteBankController);
-    
-    // create account - post method
-    server.post('/account', createAccountController);
-
-    // view accounts - with get method
-    server.get('/accounts/:id?', listAccountController);
+//Routes
+server.use(accountRoutes);
+server.use(bankRoutes);
 
 
-
-//start server
+//Start server and connect to database
 mongoose.set('strictQuery', false);
 mongoose.connect("mongodb+srv://codetrainUser:codetrain12345@cluster0.u1gvbmg.mongodb.net/codetrain?retryWrites=true&w=majority")
 .then(result => {

@@ -2,6 +2,7 @@
 const mongoose = require("mongoose");
 
 //Create a new book Schema
+const Schema = mongoose.Schema;
 const BookSchema = new mongoose.Schema({
     title: String,
     author: String,

@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const accountRoutes = require('./routes/account');
 const bankRoutes = require('./routes/bank');
+const userRoutes = require('./routes/user');
 
 //Create express server instance
 const server = express();
@@ -15,12 +16,13 @@ server.use(bodyParser.json());
 //Routes
 server.use(accountRoutes);
 server.use(bankRoutes);
+server.use(userRoutes);
 
 
 //Start server and connect to database
 mongoose.set('strictQuery', false);
 mongoose.connect("mongodb+srv://codetrainUser:codetrain12345@cluster0.u1gvbmg.mongodb.net/codetrain?retryWrites=true&w=majority")
-.then(result => {
+.then(() => {
     server.listen(3000, () => console.log('server is ready!'));
     console.log("Connected to the Mongoose DB!")
 }).catch(err => console.log(err));

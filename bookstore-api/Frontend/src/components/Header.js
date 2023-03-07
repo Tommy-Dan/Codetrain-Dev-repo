@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { AppBar, Tab, Tabs, Toolbar, Typography } from "@mui/material";
-import LibraryBooksOutlinedIcon from "@mui/icons-material/LibraryBooksOutlined";
+// import LibraryBooksOutlinedIcon from "@mui/icons-material/LibraryBooksOutlined";
 import { NavLink } from "react-router-dom";
+import LogoSearch from "./logoSearch/LogoSearch";
 
 
 
@@ -12,9 +13,7 @@ const Header = () => {
       <AppBar sx={{ backgroundColor: "#808080" }} position="sticky">
         <Toolbar>
           <NavLink to="/" style={{ color: "white" }}>
-            <Typography>
-              <LibraryBooksOutlinedIcon />
-            </Typography>
+              <LogoSearch />
           </NavLink>
           <Tabs
             sx={{ ml: "auto" }}
